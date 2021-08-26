@@ -3,7 +3,7 @@ library(biomaRt)
 library(dplyr)
 
 ensembl <- useEnsembl(biomart = "genes", dataset = "hsapiens_gene_ensembl")
-mart <- useDataset("hsapiens_gene_ensembl", useMart("ensembl"))
+mart <- useDataset("hsapiens_gene_ensembl", mart = ensembl)
 
 
 db <- read.csv("GSE144552_gene_count_matrix.csv", header = T)
